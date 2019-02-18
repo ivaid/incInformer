@@ -1,0 +1,63 @@
+page-home {
+    ion-title{
+        width:80%;
+        margin:auto;
+    }
+    ion-content{
+        .scroll-content{
+            overflow:hidden;
+        }
+        margin-top:10px;
+        .left-ads{
+            float:left;
+            @media screen and (min-width:980px){
+                width:10%;
+            }
+            @media screen and (min-width:860px) and (max-width:981px){
+                width:20%;
+            }
+            @media screen and (max-width:860px){
+                display:none;
+            }
+        }
+        .right-ads{
+            float:right;
+            @media screen and (min-width:980px){
+                width:10%;
+            }
+            @media screen and (max-width:981px){
+                display:none;
+            }
+        }
+        .main{
+            float:left;
+            height:100%;
+            
+            @media screen and (min-width:860px){
+                width:80%;
+                overflow-y:auto;
+                padding:0px 100px;
+            }
+            @media screen and (max-width:860px){
+                width:100%
+            }
+        }
+        
+    }
+    .menuIcon{
+        @media screen and (min-width:861px){
+            display:none;
+        }
+    }
+    ion-list{
+        padding-top:50px;
+        ion-item{
+            float:left;
+            img{
+                float:left;
+                margin-right:10px;
+                    width:80px;
+                }        
+        }
+    }
+}

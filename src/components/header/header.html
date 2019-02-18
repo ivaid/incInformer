@@ -1,0 +1,17 @@
+<div class="sub-header">
+  <div class="date-time">
+    {{date | date: "dd"}} <span>{{date | date: "MMMM"}}</span> {{date | date: "yyyy"}}
+  </div>
+</div>
+<div class="main">
+  <div class="logo"><a href="/"><img src="/assets/imgs/logo.png" alt="The INC Informer"></a></div>
+  <local-ads size="728x90"></local-ads>
+  <social-links></social-links>
+</div>
+<nav>
+  <ul>
+    <li *ngFor="let link of menuItem">
+      <a href='#{{link.URL}}' title="#{{link.URL}}">{{link.name}}</a>
+    </li>
+  </ul>
+</nav>

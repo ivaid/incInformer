@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button class=menuIcon ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <my-header></my-header>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class=left-ads>
+    <local-ads size="160x600"></local-ads>
+  </div>
+  <div class="main">
+    <div class=title-section>
+      <h1>{{article.title}}</h1>
+      <div class=slug>{{article.name}} | {{article.ago}}</div>
+    </div>
+    <div [innerHtml]=article.body></div>
+  </div>
+
+  <div class=right-ads>
+    <local-ads size="160x600"></local-ads>
+  </div>
+</ion-content>

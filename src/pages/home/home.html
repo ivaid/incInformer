@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button class=menuIcon ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <my-header></my-header>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+        <div class=left-ads>
+          <local-ads size="160x600"></local-ads>
+        </div>
+        <div class="main">
+            <h2>{{title}}</h2>
+          <news-slider></news-slider>
+        <ion-list>
+            
+          <ion-item *ngFor="let news of newsList" (click)=openArticle(news) style="cursor:pointer">
+            <img src="https://thesportsrumour.com{{news.thumbnail}}">
+            <h2>{{news.title}}</h2>
+            <p>{{news.summary}}</p>
+            <span style="float:right;font-size:10px;color:#00f"><a href=mailto:{{news.email}}>{{news.name}}</a> ({{news.ago}})</span>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class=right-ads>
+        <local-ads size="160x600"></local-ads>
+      </div>
+</ion-content>
+<ion-footer>
+  <div>The Sports Rumour</div>
+</ion-footer>
